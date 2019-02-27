@@ -1,15 +1,17 @@
 #include "pch.h"
 #include <iostream>
 
-void displayLen(char* input) {
-	// TODO: Display length of input
-}
-
-void reverseString(char* input) {
+void reverseString(char* input, int size) {
 	// TODO: Print input in reverse order
 }
 
-void sortArray(int* input) {
+double* maximum(double* a, int size) {
+	// TODO: Really implement - find max in array
+
+	return a;
+}
+
+void sortArray(int* input, int size) {
 	// TODO: Sort array in place with pointers
 }
 
@@ -30,31 +32,31 @@ int main()
 
 	// TODO: Add assigmens, which will print following *ptr1 = 1, *ptr2 = 5
 
-	ptr1 = &x;
-	ptr2 = &y;
-
-	std::cout << "*ptr1 = " << *ptr1 << ","
-		<< "*ptr2 = " << *ptr2 << std::endl;
+	/*std::cout << "*ptr1 = " << *ptr1 << ","
+		<< "*ptr2 = " << *ptr2 << std::endl;*/
 
 	char sampleIput[10] = "abcdefghi";
 
 	// EX 3.2: Implement function in here
-	displayLen(sampleIput);
+	reverseString(sampleIput, 10);
 
-	// EX 3.3: Implement function in here
-	reverseString(sampleIput);
+	// EX 3.3: Find max in array
+	double numbers[5] = { 4.0, 7.0, 9.0, 15.0, 3.0 };
+	
+	 double *maxptr = maximum(numbers, 5);
+	 std::cout << "Max is " << *maxptr << std::endl;
 
 	// EX 3.4: Sorting function
 	int unsortedArray[10] = { 5, 2, 3, 6, 7, 1, 0, 9, 8, 4 };
 
-	sortArray(unsortedArray);
+	sortArray(unsortedArray, 10);
 
-	// NOTE: Expects, that array will be sorted
+	// NOTE: Sorted array expected
 	for (int i = 0; i < 10; i++)
 	{
 		std::cout << unsortedArray[i];
 	}
 
-	// EX 3.5: Function behaves in a bad manner, figure out what is wrong
+	// EX 3.4: Function behaves in a bad manner, figure out what is wrong
 	iLeakMemory();
 }

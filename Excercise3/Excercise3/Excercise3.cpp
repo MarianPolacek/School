@@ -20,10 +20,10 @@ int* copyArray(int* input, int inputLength, int from, int to) {
 }
 
 void iLeakMemory() {
-	// TODO: Figure out, what is missing in this function
-
 	char* temporaryBuffer = new char[10];
 	strcpy_s(temporaryBuffer, 10, "ABCD");
+
+	// TODO: Figure out, what is missing in this function, no implementation needed
 }
 
 int main()

@@ -42,11 +42,18 @@ int main()
 
 	// EX 3.3: Find max in array
 	double numbers[5] = { 4.0, 7.0, 9.0, 15.0, 3.0 };
-	
-	 double *maxptr = maximum(numbers, 5);
-	 std::cout << "Max is " << *maxptr << std::endl;
 
-	// EX 3.4: Sorting function
+	double *maxptr = maximum(numbers, 5);
+	std::cout << "Max is " << *maxptr << std::endl;
+
+	// EX 3.4: Define 2d dynamic matrix with r - count of rows, s - count of columns
+	//         fill it with numbers starting from 0 (first row 0-9, second row 10-19,...)
+	int r = 5;
+	int s = 10;
+
+
+
+	// EX 3.5: Sorting function
 	int unsortedArray[10] = { 5, 2, 3, 6, 7, 1, 0, 9, 8, 4 };
 
 	sortArray(unsortedArray, 10);
@@ -57,6 +64,6 @@ int main()
 		std::cout << unsortedArray[i];
 	}
 
-	// EX 3.4: Function behaves in a bad manner, figure out what is wrong
+	// EX 3.6: Function behaves in a bad manner, figure out what is wrong
 	iLeakMemory();
 }

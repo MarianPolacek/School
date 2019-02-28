@@ -2,17 +2,18 @@
 #include <iostream>
 
 double* maximum(double* a, int size) {
-	// TODO: Implement - find max in array
+	// TODO: Implement - find and return pointer to maximum element in array
 
 	return a;
 }
 
 void printArray(int* input, int size) {
-	// TODO: Print array
+	// TODO: Print an array
 }
 
-int* copyArray(int* input, int inputLength, int take) {
-	// TODO: Implement copy, that takes "take" elements from input
+int* copyArray(int* input, int inputLength, int from, int to) {
+	// TODO: Implement copy array, which create new array filled with elements starting from position "from"
+	// and ending at position "to"
 
 	return input;
 }
@@ -56,8 +57,8 @@ int main()
 	iLeakMemory();
 
 	// EX 3.6: Write PrintArray function
-	int arrInput[10] = { 1,2,3,4,5,6,7,8,9,10 };
-	int* copy = copyArray(arrInput, 10, 3);
+	int arrInput[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	int* copy = copyArray(arrInput, 10, 3, 7);
 
 	printArray(copy, 3);
 }

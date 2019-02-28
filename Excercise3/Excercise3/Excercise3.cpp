@@ -1,18 +1,20 @@
 #include "pch.h"
 #include <iostream>
 
-void reverseString(char* input, int size) {
-	// TODO: Print input in reverse order
-}
-
 double* maximum(double* a, int size) {
-	// TODO: Really implement - find max in array
+	// TODO: Implement - find max in array
 
 	return a;
 }
 
-void sortArray(int* input, int size) {
-	// TODO: Sort array in place with pointers
+void printArray(int* input, int size) {
+	// TODO: Print array
+}
+
+int* copyArray(int* input, int inputLength, int take) {
+	// TODO: Implement copy, that takes "take" elements from input
+
+	return input;
 }
 
 void iLeakMemory() {
@@ -35,34 +37,27 @@ int main()
 	/*std::cout << "*ptr1 = " << *ptr1 << ","
 		<< "*ptr2 = " << *ptr2 << std::endl;*/
 
-	char sampleIput[10] = "abcdefghi";
-
-	// EX 3.2: Implement function in here
-	reverseString(sampleIput, 10);
-
-	// EX 3.3: Find max in array
+		// EX 3.2: Find max in array
 	double numbers[5] = { 4.0, 7.0, 9.0, 15.0, 3.0 };
 
 	double *maxptr = maximum(numbers, 5);
 	std::cout << "Max is " << *maxptr << std::endl;
 
-	// EX 3.4: Define 2d dynamic matrix with r - count of rows, s - count of columns
+	// EX 3.3: Define 2d dynamic matrix with r - count of rows, s - count of columns
 	//         fill it with numbers starting from 0 (first row 0-9, second row 10-19,...)
 	int r = 5;
 	int s = 10;
 
+	// EX 3.4: Print array
+	int arrPrint[5] = { 1,2,3,4,5 };
+	printArray(arrPrint, 5);
+
 	// EX 3.5: Function behaves in a bad manner, figure out what is wrong
 	iLeakMemory();
 
-	// EX 3.6: Sorting function
-	int unsortedArray[10] = { 5, 2, 3, 6, 7, 1, 0, 9, 8, 4 };
+	// EX 3.6: Write PrintArray function
+	int arrInput[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int* copy = copyArray(arrInput, 10, 3);
 
-	sortArray(unsortedArray, 10);
-
-	// NOTE: Sorted array expected
-	for (int i = 0; i < 10; i++)
-	{
-		std::cout << unsortedArray[i];
-	}
-
+	printArray(copy, 3);
 }

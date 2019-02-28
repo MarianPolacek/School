@@ -61,5 +61,5 @@ int main()
 	int arrInput[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 	int* copy = copyArray(arrInput, 10, 3, 7);
 
-	printArray(copy, 3);
+	printArray(copy, 7 - 3);
 }

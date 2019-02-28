@@ -15,6 +15,7 @@ int* copyArray(int* input, int inputLength, int from, int to) {
 	// TODO: Implement copy array, which create new array filled with elements starting from position "from"
 	// and ending at position "to"
 
+	// NOTE: This is not correct return, should return pointer to new matrix
 	return input;
 }
 

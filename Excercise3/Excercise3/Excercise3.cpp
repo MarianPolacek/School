@@ -51,9 +51,10 @@ int main()
 	int r = 5;
 	int s = 10;
 
+	// EX 3.5: Function behaves in a bad manner, figure out what is wrong
+	iLeakMemory();
 
-
-	// EX 3.5: Sorting function
+	// EX 3.6: Sorting function
 	int unsortedArray[10] = { 5, 2, 3, 6, 7, 1, 0, 9, 8, 4 };
 
 	sortArray(unsortedArray, 10);
@@ -64,6 +65,4 @@ int main()
 		std::cout << unsortedArray[i];
 	}
 
-	// EX 3.6: Function behaves in a bad manner, figure out what is wrong
-	iLeakMemory();
 }
